@@ -1,0 +1,72 @@
+-- import to SQLite by running: sqlite3.exe db.sqlite3 -init sqlite.sql
+
+PRAGMA journal_mode = MEMORY;
+PRAGMA synchronous = OFF;
+PRAGMA foreign_keys = OFF;
+PRAGMA ignore_check_constraints = OFF;
+PRAGMA auto_vacuum = NONE;
+PRAGMA secure_delete = OFF;
+BEGIN TRANSACTION;
+
+
+CREATE TABLE IF NOT EXISTS `patient` (
+`id` bigINTEGER NOT NULL,
+`aids` bit(1) DEFAULT NULL,
+`alcohol` TEXT  DEFAULT NULL,
+`birth_year` INTEGER DEFAULT NULL,
+`bmi` float DEFAULT NULL,
+`cerebrovascular_accident_except_hemiplegia` bit(1) DEFAULT NULL,
+`charlson_comorbidity_index` INTEGER DEFAULT NULL,
+`chronic_pulmonary_disease` bit(1) DEFAULT NULL,
+`cigarettes_pack_years_smoked_during_life` INTEGER DEFAULT NULL,
+`comorbidity` TEXT  DEFAULT NULL,
+`congestive_heart_failure` bit(1) DEFAULT NULL,
+`connective_tissue_disease` bit(1) DEFAULT NULL,
+`country_of_residence` TEXT  DEFAULT NULL,
+`dementia` bit(1) DEFAULT NULL,
+`diabetes_with_end_organ_damage` bit(1) DEFAULT NULL,
+`diabetes_without_complications` bit(1) DEFAULT NULL,
+`ecog_ps` INTEGER DEFAULT NULL,
+`ecog_ps_label` TEXT  DEFAULT NULL,
+`gender` TEXT  DEFAULT NULL,
+`hemiplegia` bit(1) DEFAULT NULL,
+`karnofsy_index_at_diagnosis` INTEGER DEFAULT NULL,
+`karnofsy_index_label` TEXT  DEFAULT NULL,
+`leukemia` bit(1) DEFAULT NULL,
+`li_fraumeni_syndrome` bit(1) DEFAULT NULL,
+`lymphoma` bit(1) DEFAULT NULL,
+`maffuci_syndrome` bit(1) DEFAULT NULL,
+`mc_cune_albright_syndrome` bit(1) DEFAULT NULL,
+`metastatic_solid_tumor` bit(1) DEFAULT NULL,
+`mild_liver_disease` bit(1) DEFAULT NULL,
+`moderate_to_severe_liver_disease` bit(1) DEFAULT NULL,
+`moderate_to_severe_renal_disease` bit(1) DEFAULT NULL,
+`multiple_myeloma` bit(1) DEFAULT NULL,
+`multiple_osteochondromas` bit(1) DEFAULT NULL,
+`myocardial_infarction` bit(1) DEFAULT NULL,
+`neurofibromatosis_type1` bit(1) DEFAULT NULL,
+`no_genetic_syndrome_who2020` bit(1) DEFAULT NULL,
+`occurrence_of_other_cancer` TEXT  DEFAULT NULL,
+`olliers_disease` bit(1) DEFAULT NULL,
+`paget_disease` bit(1) DEFAULT NULL,
+`peripheral_vascular_disease` bit(1) DEFAULT NULL,
+`previous_cancer_treatment` TEXT  DEFAULT NULL,
+`race` TEXT  DEFAULT NULL,
+`retinoblastoma` bit(1) DEFAULT NULL,
+`rothmund_thomson_syndrome` bit(1) DEFAULT NULL,
+`smoking` TEXT  DEFAULT NULL,
+`solid_tumor_non_metastatic` bit(1) DEFAULT NULL,
+`ulcer` bit(1) DEFAULT NULL,
+`werner_syndrome` bit(1) DEFAULT NULL,
+PRIMARY KEY (`id`)
+);
+
+
+
+
+
+COMMIT;
+PRAGMA ignore_check_constraints = ON;
+PRAGMA foreign_keys = ON;
+PRAGMA journal_mode = WAL;
+PRAGMA synchronous = NORMAL;

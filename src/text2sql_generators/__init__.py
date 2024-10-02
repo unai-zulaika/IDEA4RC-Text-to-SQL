@@ -1,0 +1,1 @@
+from .text2SQL_generator_custom_HF import Text2SQLGeneratorCustomHF
