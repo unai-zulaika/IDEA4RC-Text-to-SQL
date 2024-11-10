@@ -1,0 +1,6 @@
+- **Concept IDs:** Use the following IDs for the respective fields: 
+    GENDER_CONCEPT_ID: '8507' for male, '8532' for female.
+    '4213045' for 'Lumpectomy'
+    For checking CONDITIONs you can check the condition_source_value in the CONDITION_OCURRENCE table and perform a regex containing: "8520" for Lobular carcinoma 
+- **Concept Name:** Whenever you are returning an entity (drug, condition, procedure, measurement) concept id (e.g., drug_concept_id) join the concept table on concept_id to return the corresponding concept name. (e.g., join on concept_id = drug_concept_id).
+     

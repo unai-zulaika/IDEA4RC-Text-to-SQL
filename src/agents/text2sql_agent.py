@@ -23,6 +23,15 @@ class Text2SQLAgent:
         self.executor = executor
         self.evaluator = evaluator
 
+    def run_query(self, query: str):
+        prompts = self.prompt_generator.generate_prompts(user_queries=[query])
+
+        model_responses = self.textsql_generator.generate(
+            prompts=prompts, temperature=0.0, max_new_tokens=512
+        )
+
+        return model_responses
+
     def run(self, inputs_path: str, term_to_code_path: str):
         # TODO
         modified_user_queries, sql_labels = self.prepare_inputs(
@@ -37,18 +46,21 @@ class Text2SQLAgent:
             prompts=prompts, temperature=0.0, max_new_tokens=512
         )
 
-        print(sql_statements)
-
         # join model's sql output and true labels
 
         model_responses = [
             {
+                "modified_query": modified_query,
                 "generated": response,
                 "SQL": sql_labels,
                 # "db_path": dsn_or_db_path,
             }
-            for response, sql_labels in zip(sql_statements, sql_labels)
+            for response, sql_labels, modified_query in zip(
+                sql_statements, sql_labels, modified_user_queries
+            )
         ]
+
+        print(model_responses)
 
         # Now evaluate the models
         results = self.evaluator.execute(

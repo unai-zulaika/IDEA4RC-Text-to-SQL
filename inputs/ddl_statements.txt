@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS `patient` (
   `id` bigint(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-CREATE TABLE IF NOT EXISTS `cancer_episode` (
+);
+CREATE TABLE `cancer_episode` (
   `id` bigint(20) NOT NULL,
   `age_at_diagnosis` int(11) DEFAULT NULL,
   `biopsy_done_by` varchar(255) DEFAULT NULL,
@@ -54,3 +54,4 @@ CREATE TABLE IF NOT EXISTS `cancer_episode` (
   PRIMARY KEY (`id`),
   KEY `FK17fn7yxaxdfux6cc2o0ap6b72` (`patient`),
   CONSTRAINT `FK17fn7yxaxdfux6cc2o0ap6b72` FOREIGN KEY (`patient`) REFERENCES `patient` (`id`)
+);

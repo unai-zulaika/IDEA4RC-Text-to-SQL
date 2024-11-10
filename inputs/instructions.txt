@@ -2,5 +2,4 @@
 - recall that the current date in YYYY-MM-DD format is 2024-09-19
 - The diagnosis data is found in the CancerEpisode table
 - You must always return the patient.id from the patient table where the patient fills the requirements of the user query
-- Return only the SQL statement nothing else
 - Do not output NULLS LAST in the SQL statements

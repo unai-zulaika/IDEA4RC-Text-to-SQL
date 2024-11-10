@@ -12,10 +12,13 @@ ddl_statements_path = "../inputs/ddl_statements.txt"
 # model_name = "premai-io/prem-1B-SQL"
 model_name = "defog/llama-3-sqlcoder-8b"
 # model_name = "meta-llama/Llama-3.2-1B-Instruct"
+use_omop = True
 
 #### prompt to be moved to generator
 prompt_generator = Text2SQLCustomPromptGenerator(
-    instructions_path=instructions_path, ddl_statements_path=ddl_statements_path
+    instructions_path=instructions_path,
+    ddl_statements_path=ddl_statements_path,
+    use_omop=use_omop,
 )
 
 # the generator is the the LLM that outputs the SQL
@@ -28,7 +31,7 @@ text2sql_generator = Text2SQLGeneratorCustomHF(
 )
 
 # start the process that will run the SQL queries in the DB
-executor = MySQLExecutor()
+executor = MySQLExecutor(use_omop=use_omop)
 
 # Define the evaluator
 evaluator = CustomText2SQLEvaluator(

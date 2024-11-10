@@ -1,0 +1,66 @@
+INFO:     Will watch for changes in these directories: ['/home/zulaika/IDEA4RC-Text2SQL/src']
+INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+INFO:     Started reloader process [1420673] using WatchFiles
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.10it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.09it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.10it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.47it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.30it/s]
+/home/zulaika/.local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/zulaika/.local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+2024-11-05 16:09:17,812 - [GENERATOR] - INFO - Experiment folder found in: experiments/test/test_generators
+INFO:     Started server process [1420676]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     83.213.2.173:8852 - "GET / HTTP/1.1" 404 Not Found
+INFO:     83.213.2.173:8852 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     212.81.184.198:50057 - "GET / HTTP/1.1" 404 Not Found
+INFO:     212.81.184.198:50057 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     10.70.0.28:16798 - "GET / HTTP/1.1" 404 Not Found
+INFO:     10.70.0.28:16798 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     192.168.160.18:59245 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     192.168.160.18:59245 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.70.0.28:16806 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.168.160.18:59250 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     192.168.160.18:59250 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.45.1.134:63896 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     10.45.1.134:63896 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.45.1.134:65449 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     10.45.1.134:65449 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     88.28.10.78:60554 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     88.28.10.78:60554 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     79.117.86.40:40704 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     79.117.86.40:40704 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.45.1.134:55819 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     10.45.1.134:55819 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.45.1.134:55835 - "GET /api/query_to_sql?query=asasa&api_key=adsa HTTP/1.1" 401 Unauthorized
+INFO:     10.45.1.134:54560 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     10.45.1.134:54560 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     79.117.213.102:59838 - "GET /api/docs HTTP/1.1" 200 OK
+INFO:     79.117.213.102:59838 - "GET /openapi.json HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1420676]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.16it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.13it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.13it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.51it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.35it/s]
+/home/zulaika/.local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/zulaika/.local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+2024-11-09 11:10:56,821 - [GENERATOR] - INFO - Experiment folder found in: experiments/test/test_generators
+INFO:     Started server process [1760624]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

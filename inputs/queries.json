@@ -1,10 +1,10 @@
 [
     {
-        "question": "Retrieve all patient id for those patient diagnosed with a angiomyxoma or carcinoma",
-        "answer": "SELECT p.id FROM patient p JOIN cancer_episode ce ON p.id = ce.patient WHERE ce.tumours_of_uncertain_differentiation = 'ANGIOMYXOMA' OR (ce.histology_squamous IN ('VERRUCOUS_SQUAMOUS_CAELL_CARCINOMA', 'GIANT_CELL_SQUAMOUS_CELL_CARCINOMA', 'ACINAR_CELL_CARCINOMA', 'SCHNEIDERIAN_CARCINOMA', 'SQUAMOUS_CELL_CARCINOMA', 'MYOEPITHELIAL_CARCINOMA', 'ADENOSQUAMOUS_CARCINOMA', 'ADENOID_CYSTIC_CARCINOMA', 'MUCEPDERMOID_CARCINOMA')) ORDER BY p.id;"
+        "question": "Retrieve all distinct patient id for female patients diagnosed with a paget disease",
+        "answer": "SELECT DISTINCT p.person_id FROM omopcdm_synthetic.PERSON p JOIN omopcdm_synthetic.CONDITION_OCCURRENCE co ON p.person_id = co.person_id WHERE p.gender_concept_id = 8532 AND co.condition_concept_id IN (44499557, 44502548);"
     },
     {
-        "question": "Retrieve all patient id diagnosed with primary retroperitoneal sarcomas OR any sarcoma histology AND with the diagnosis date between 2010-2014",
-        "answer": "SELECT p.id FROM patient p JOIN cancer_episode ce ON p.id = ce.patient WHERE ce.intra_abdominal_subsite = 'RETROPERITONEAL_COMP_STRUCT' OR ce.tumours_of_uncertain_differentiation IN ('INTIMAL_SARCOMA', 'SYNOVIAL_SARCOMA', 'CLEAR_CELL_SARCOMA', 'GIANT_CELL_SARCOMA', 'EPITHELIOID_SARCOMA', 'HISTIOCYTIC_SARCOMA', 'SPINDLE_CELL_SARCOMA') AND ce.date_of_diagnosis BETWEEN '2010-01-01' AND '2014-12-31' ORDER BY p.id ;"
+        "question": "Retrieve all patient id for patients diagnosed in the lower inner quadrant of breast that went under lumpectomy",
+        "answer": "SELECT DISTINCT p.person_id FROM omopcdm_synthetic.PERSON p JOIN omopcdm_synthetic.CONDITION_OCCURRENCE co ON p.person_id = co.person_id JOIN omopcdm_synthetic.PROCEDURE_OCCURRENCE po ON p.person_id = po.person_id JOIN omopcdm_synthetic.CONCEPT c ON co.condition_concept_id = c.concept_id WHERE co.condition_source_value LIKE '%8520%' AND po.procedure_concept_id = 4213045;"
     }
 ]

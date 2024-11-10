@@ -101,10 +101,13 @@ class Text2SQLGeneratorCustomHF(Text2SQLGeneratorBase):
                 else completion
             )
 
-            response = response.split("```sql\n", 1)[1]
-            response = response.lstrip()
-            response = response.replace("`", "")
-            response = response.replace("NULLS LAST", "")
+            try:
+                response = response.split("```sql", 1)[1]
+                response = response.lstrip()
+                response = response.replace("`", "")
+                response = response.replace("NULLS LAST", "")
+            except:
+                pass
 
             index = response.find("SELECT")
             if index != -1:
