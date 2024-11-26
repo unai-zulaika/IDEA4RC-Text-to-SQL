@@ -18,7 +18,6 @@ CREATE TABLE omopcdm_synthetic.PERSON (
 			ethnicity_source_value varchar(50) NULL,
 			ethnicity_source_concept_id integer NULL );
 
-
       --HINT DISTRIBUTE ON KEY (person_id)
 CREATE TABLE omopcdm_synthetic.CONDITION_OCCURRENCE (
 			condition_occurrence_id integer NOT NULL,
@@ -37,3 +36,21 @@ CREATE TABLE omopcdm_synthetic.CONDITION_OCCURRENCE (
 			condition_source_value varchar(50) NULL,
 			condition_source_concept_id integer NULL,
 			condition_status_source_value varchar(50) NULL );
+
+CREATE TABLE omopcdm_synthetic.PROCEDURE_OCCURRENCE (
+			procedure_occurrence_id integer NOT NULL,
+			person_id integer NOT NULL,
+			procedure_concept_id integer NOT NULL,
+			procedure_date date NOT NULL,
+			procedure_datetime TIMESTAMP NULL,
+			procedure_end_date date NULL,
+			procedure_end_datetime TIMESTAMP NULL,
+			procedure_type_concept_id integer NOT NULL,
+			modifier_concept_id integer NULL,
+			quantity integer NULL,
+			provider_id integer NULL,
+			visit_occurrence_id integer NULL,
+			visit_detail_id integer NULL,
+			procedure_source_value varchar(50) NULL,
+			procedure_source_concept_id integer NULL,
+			modifier_source_value varchar(50) NULL );
